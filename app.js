@@ -6,7 +6,7 @@ const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 const cityHide = document.querySelector('.city-hide');
 
-cityHide.style.display = 'none'; // Hide the city element by default
+cityHide.style.display = 'none'; 
 
 function searchWeatherByCity(city) {
     const APIKey = '94216056ae088fedfcff3d2457d9f908';
@@ -30,7 +30,7 @@ function searchWeatherByCity(city) {
             const wind = document.querySelector('.weather-details .wind span');
 
             cityHide.textContent = city;
-            cityHide.style.display = 'block'; // Show the city element after search
+            cityHide.style.display = 'block'; 
 
             container.style.height = '555px';
             container.classList.add('active');
@@ -83,7 +83,7 @@ function searchWeatherByLocation(latitude, longitude) {
             }
 
             cityHide.textContent = json.name;
-            cityHide.style.display = 'block'; // Show the city element after search
+            cityHide.style.display = 'block'; 
 
             container.style.height = '555px';
             container.classList.add('active');
@@ -133,7 +133,7 @@ function searchWeather() {
             },
             error => {
                 console.error(error);
-                // Handle errors or display a message to the user
+            
             }
         );
     } else {
@@ -149,5 +149,5 @@ inputField.addEventListener('keypress', function (e) {
     }
 });
 
-// Call searchWeather() on page load to automatically detect and display location details
+
 window.addEventListener('load', searchWeather);
